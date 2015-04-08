@@ -14,7 +14,6 @@ import com.brian.halflifetracker.R;
 public class ActiveDrugAdapter extends RecyclerView.Adapter<ActiveDrugAdapter.ViewHolder> {
     private String[] mDataset;
 
-    // Provide a reference to the views for each data item
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView mTextView;
