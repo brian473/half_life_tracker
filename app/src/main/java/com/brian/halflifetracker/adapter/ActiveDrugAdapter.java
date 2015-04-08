@@ -18,6 +18,8 @@ public class ActiveDrugAdapter extends RecyclerView.Adapter<ActiveDrugAdapter.Vi
         public View mView;
         public ViewHolder(View v) {
             super(v);
+
+            mView = v;
         }
     }
 

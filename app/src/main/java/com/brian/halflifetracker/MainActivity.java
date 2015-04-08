@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new ActiveDrugAdapter(new String[] {"Testing"});
+        mAdapter = new ActiveDrugAdapter(new String[] {"Aspirin", "Ethanol", "Acetaminophen"});
         mRecyclerView.setAdapter(mAdapter);
     }
 }
