@@ -12,19 +12,20 @@ import com.brian.halflifetracker.R;
  * Created by Brian on 3/31/2015.
  */
 public class ActiveDrugAdapter extends RecyclerView.Adapter<ActiveDrugAdapter.ViewHolder> {
-    private String[] mDataset;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mTextView;
+        public View mView;
         public ViewHolder(View v) {
             super(v);
         }
     }
 
+    private String[] mDataset;
+
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ActiveDrugAdapter(String[] myDataset) {
-        mDataset = myDataset;
+    public ActiveDrugAdapter(String[] pDataset) {
+        mDataset = pDataset;
     }
 
     // Create new views (invoked by the layout manager)
@@ -32,20 +33,17 @@ public class ActiveDrugAdapter extends RecyclerView.Adapter<ActiveDrugAdapter.Vi
     public ActiveDrugAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                    int viewType) {
         // create a new view
-        TextView v = (TextView)LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.simple_text_view, parent, false);
+        View v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.drug_list_card_view, parent, false);
 
         ViewHolder vh = new ViewHolder(v);
         return vh;
+
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        holder.mTextView.setText(mDataset[position]);
-
+        ((TextView)holder.mView.findViewById(R.id.active_drug_cardview_title)).setText(mDataset[position]);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
