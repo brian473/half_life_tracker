@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="indigo" type="color">#2600B0</item>
-    <item name="darkindigo" type="color">#210096</item>
+    <item name="indigo" type="color">#283593</item>
+    <item name="darkindigo" type="color">#1A237E</item>
+    <item name="white" type="color">#E8EAF6</item>
+    <item name="grey" type="color">#C5CAE9</item>
 </resources>
