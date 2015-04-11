@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:background="@color/grey"/>
 
-    <com.getbase.floatingactionbutton.AddFloatingActionButton
-        android:id="@+id/normal_plus"
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -21,6 +21,10 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"/>
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_add_white_24dp"
+        fab:fab_colorNormal="@color/red"
+        fab:fab_colorPressed="@color/red"
+        fab:fab_colorRipple="@color/redpressed"/>
 
 </RelativeLayout>

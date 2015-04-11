@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.brian.halflifetracker.adapter.ActiveDrugAdapter;
+import com.melnykov.fab.FloatingActionButton;
 
 
 public class MainActivity extends Activity {
@@ -15,6 +16,7 @@ public class MainActivity extends Activity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private FloatingActionButton mFloatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,9 @@ public class MainActivity extends Activity {
 
         //Using
         mRecyclerView = (RecyclerView) findViewById(R.id.active_drug_recycler);
+        mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
+
+        mFloatingActionButton.attachToRecyclerView(mRecyclerView);
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView

@@ -26,7 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:background="@color/indigo">
+                android:background="@color/darkgrey">
 
             <TextView
                 android:id="@+id/active_drug_cardview_title"
@@ -40,23 +40,14 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"/>
 
-                <!-- options button wrap -->
-                <RelativeLayout
-                    android:id="@+id/options_button"
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/darkindigo">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/options"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"/>
 
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/options"
-                        android:layout_centerInParent="true"/>
-
-                </RelativeLayout> <!-- options button wrap -->
             </LinearLayout> <!-- title bar wrap -->
-
-
         </RelativeLayout> <!-- cardview wrap -->
     </android.support.v7.widget.CardView>
 </LinearLayout>
