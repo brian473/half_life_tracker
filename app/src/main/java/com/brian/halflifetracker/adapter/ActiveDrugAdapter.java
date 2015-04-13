@@ -40,7 +40,6 @@ public class ActiveDrugAdapter extends RecyclerView.Adapter<ActiveDrugAdapter.Vi
 
         ViewHolder vh = new ViewHolder(v);
         return vh;
-
     }
 
     @Override
