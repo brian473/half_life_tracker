@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Using
+        //Using RecyclerView just to try it out. It's probably not the best thing to use here.
         mRecyclerView = (RecyclerView) findViewById(R.id.active_drug_recycler);
         mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
 
@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new ActiveDrugAdapter(new String[] {"Aspirin", "Ethanol", "Acetaminophen"});
+        mAdapter = new ActiveDrugAdapter(new String[] {"Aspirin", "Ibuprofen", "Acetaminophen"});
         mRecyclerView.setAdapter(mAdapter);
     }
 }
