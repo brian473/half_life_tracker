@@ -11,15 +11,16 @@
         android:id="@+id/active_drug_cardview"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         card_view:cardCornerRadius="4dp"
         android:layout_margin="10dp"
         android:background="@color/white">
 
         <!-- cardview wrap -->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <!-- title bar wrap -->
             <LinearLayout
@@ -69,8 +70,65 @@
                 </LinearLayout> <!-- options wrap -->
             </LinearLayout> <!-- title bar wrap -->
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/drug_list_cardview_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:layout_margin="10dp"/>
+                
+                <TextView
+                    android:id="@+id/drug_list_cardview_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount in blood: 300mg"
+                    android:textColor="@color/darkgrey"
+                    android:textSize="16sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Relative Strength:"
+                        android:textColor="@color/darkgrey"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/drug_list_cardview_progressbar"
+                        style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progressBackgroundTint="@color/grey"
+                        android:progressTint="@color/indigo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"/>
 
 
-        </RelativeLayout> <!-- cardview wrap -->
+            </LinearLayout>
+
+
+        </LinearLayout> <!-- cardview wrap -->
     </android.support.v7.widget.CardView>
 </LinearLayout>

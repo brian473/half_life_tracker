@@ -3,8 +3,7 @@
     package="com.brian.halflifetracker" >
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:maxSdkVersion="21"
+        android:minSdkVersion="21"
         android:targetSdkVersion="21"/>
 
     <application

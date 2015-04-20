@@ -4,9 +4,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.brian.halflifetracker.R;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by Brian on 3/31/2015.
@@ -15,11 +18,21 @@ public class ActiveDrugAdapter extends RecyclerView.Adapter<ActiveDrugAdapter.Vi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public View mView;
+        public View mRootView;
+        public TextView mTitle;
+        public TextView mDescription;
+        public TextView mAmount;
+        public ProgressBar mProgressBar;
+
         public ViewHolder(View v) {
             super(v);
 
-            mView = v;
+            mRootView = v;
+
+            mTitle = (TextView) mRootView.findViewById(R.id.active_drug_cardview_title);
+            mDescription = (TextView) mRootView.findViewById(R.id.drug_list_cardview_description);
+            mAmount = (TextView) mRootView.findViewById(R.id.drug_list_cardview_amount);
+            mProgressBar = (ProgressBar) mRootView.findViewById(R.id.drug_list_cardview_progressbar);
         }
     }
 
@@ -39,12 +52,18 @@ public class ActiveDrugAdapter extends RecyclerView.Adapter<ActiveDrugAdapter.Vi
                 .inflate(R.layout.drug_list_card_view, parent, false);
 
         ViewHolder vh = new ViewHolder(v);
+
+//        vh.mTitle.setText();
+//        vh.mDescription.setText();
+//        vh.mAmount.setText();
+        vh.mProgressBar.setProgress(80);
+
         return vh;
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        ((TextView)holder.mView.findViewById(R.id.active_drug_cardview_title)).setText(mDataset[position]);
+        holder.mTitle.setText(mDataset[position]);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
